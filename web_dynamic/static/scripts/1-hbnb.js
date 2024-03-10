@@ -11,7 +11,7 @@ $(document).ready(() => {
     if (this.checked) {
       amenityId[dataId] = dataName;
     } else {
-      // delete amenityId[dataId];
+      delete amenityId[dataId];
     }
 
     const output = Object.values(amenityId).join(', ') || '&nbsp;'; // Use Object.values to extract values
