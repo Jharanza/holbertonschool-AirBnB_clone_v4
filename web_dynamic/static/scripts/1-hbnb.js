@@ -4,7 +4,7 @@ $(document).ready(() => {
   const checkbox = $('.amenities input[type="checkbox"]');
   checkbox.prop('checked', false);
 
-  checkbox.change(function() { // Use function() instead of arrow function to preserve 'this' context
+  checkbox.change(function() { 
     const dataId = $(this).attr('data-id');
     const dataName = $(this).attr('data-name');
 
@@ -14,9 +14,7 @@ $(document).ready(() => {
       delete amenityId[dataId];
     }
 
-    const output = Object.values(amenityId).join(', ') || '&nbsp;'; // Use Object.values to extract values
-    $('div.amenities > h4').html(output); // Use html() to insert HTML content
-
-    checkbox.trigger('change');
+    const output = Object.values(amenityId).join(', ') || '&nbsp;';
+    $('div.amenities > h4').html(output); 
   });
 });

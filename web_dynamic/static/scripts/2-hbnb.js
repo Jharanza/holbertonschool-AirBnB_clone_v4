@@ -16,8 +16,6 @@ $(document).ready(() => {
 
     const output = Object.values(amenityId).join(', ') || '&nbsp;'; 
     $('div.amenities > h4').html(output);
-
-    checkbox.trigger('change');
   });
 
   $.ajax({
